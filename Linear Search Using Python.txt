@@ -1,0 +1,29 @@
+def linear_search(arr,size,search_elemet):
+  
+    for i in range(size):
+        
+        if arr[i]==search_elemet:
+            return i
+           
+    return -1 
+        
+        
+if __name__ == '__main__':
+    arr=[]
+    print("***Enter the Number in Array First Before Search the Element***\n")
+    size=int(input("Enter the Size of Array:"))
+    for i in range(0,size):
+        numbers=int(input(f"Enter the index {i} Element:"))
+        arr.append(numbers)
+    print("array is :")
+    for i in range(size):
+        print(arr[i])
+        
+    inp=int(input("Enter the element You want to search From the input array: "))   
+        
+    ind=linear_search(arr,size,inp)
+    if ind==-1:
+        print("Element Not Found")
+    else:    
+    
+        print(f"The Element {inp} Found at index {ind}")
